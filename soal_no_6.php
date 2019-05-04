@@ -20,7 +20,7 @@ if (mysqli_connect_errno()) {
     echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-    $sql = "SELECT * FROM candidates";
+    $sql = "SELECT * FROM `candidates` ORDER BY `candidates`.`earned_vote` DESC";
     $result = mysqli_query($db, $sql);
     
     if (mysqli_num_rows($result) > 0) {
